@@ -1,0 +1,78 @@
+:root{
+    
+    //form-validation
+    --error: hsl(356, 69%, 56%);
+    --success: hsl(163, 72%, 41%);
+    --focus: hsl(37, 97%, 70%);
+
+    //primary    
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --Soft-red: hsl(14, 88%, 65%);
+    --Soft-violet: hsl(273, 75%, 66%);
+    --Soft-blue: hsl(240, 73%, 65%);
+    --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --Dark-grayish-blue: hsl(240, 6%, 50%);
+    --Light-grayish-blue: hsl(240, 5%, 91%);
+
+
+    //blue-shades
+    --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --Soft-red: hsl(14, 88%, 65%);
+
+    //Background gradient:
+    --Soft-violet: hsl(273, 75%, 66%);
+    --Soft-blue: hsl(240, 73%, 65%);
+
+
+    //text
+    --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --Dark-grayish-blue: hsl(240, 6%, 50%);
+
+    //divider
+    --Light-grayish-blue: hsl(240, 5%, 91%);
+    //neutral
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+
+
+    //web-safe-blue
+    --blue-1: #9999ff;
+    --blue-2: #6666ff;
+    --blue-3: #3333ff;
+    --blue-4: #0000ff;
+    --blue-5: #5640f4;
+    --blue-6: #4070f4;
+
+    //web-safe-red
+    --red-1: #ff9999;
+    --red-2: #ff6666;
+    --red-3: #ff3333;
+    --red-4: #ff0000;
+
+
+    //web-safe-green
+    --green-1: #99ff99;
+    --green-2: #66ff66;
+    --green-3: #33ff33;
+    --green-4: #00ff00;
+
+    //web-safe-grey
+    --grey-1: #999999;
+    --grey-2: #666666;
+    --grey-3: #333333;
+    --grey-4: #f3f1fe;
+    --grey-5: #d1d1d1;
+
+    //white
+    --white-1: #fafafa;
+    --white-2: #f8f9fb;
+
+    //dark
+    --dark-1: #212121;
+    --dark-2: #111111;
+}

@@ -1,0 +1,368 @@
+:root {
+    --alpha: 1;
+    --alpha-2: 0.8;
+    --alpha-3: 0.6;
+    --alpha-4: 0.4;
+    --alpha-5: 0.2;
+    --fontFw: 200;
+    --fontFw-1: 300;
+    --fontFw-2: 400;
+    --fontFw-3: 500;
+    --fontFw-4: 700;
+    --fontFw-5: 900;
+    --max-width-mob-1: 380px;
+    --max-width-mob: 480px;
+    --max-width-tab: 650px;
+    --max-width-desktop: 900px;
+    --max-width-desktop: 1440px;
+    --major-white: #ffffff;
+    --major-black: #000000;
+    --button-pad-1: 1em 2em;
+    --button-pad-2: 0.5em 1em;
+    --button-pad-3: 0.5em 2em;
+
+
+
+}
+
+//z-index
+$z-index: (modal : 9000,
+    overlay : 8000,
+    dropdown : 7000,
+    header : 6000,
+    footer : 5000);
+
+
+
+
+
+
+// flex
+@mixin flex-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+@mixin flex-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+//box-shadow
+
+@mixin box-shadow {
+    box-shadow: 0 5px 10px -5px rgba($color: #000000, $alpha: var(--alpha))
+}
+
+@mixin box-shadow-2 {
+    box-shadow: 0 5px 10px -5px rgba($color: #000000, $alpha: var(--alpha-2))
+}
+
+@mixin box-shadow-3 {
+    box-shadow: 0 5px 10px -5px rgba($color: #000000, $alpha: var(--alpha-3))
+}
+
+@mixin box-shadow-4 {
+    box-shadow: 0 5px 10px -5px rgba($color: #000000, $alpha: var(--alpha-4));
+}
+
+@mixin box-shadow-5 {
+    box-shadow: 0 5px 10px -5px rgba($color: #000000, $alpha: var(--alpha-5))
+}
+
+//button
+@mixin button {
+    display: inline-block;
+    line-height: 1.5;
+    appearance: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.375em 0.75em;
+    font-size: 0.89rem;
+    text-transform: capitalize;
+    border-radius: 2px;
+    letter-spacing: 1px;
+
+}
+
+//svg
+
+@mixin svg-button {
+
+    appearance: none;
+    border: none;
+
+}
+
+@mixin svg-1 {
+
+    path {
+        fill: #000000;
+    }
+
+}
+
+@mixin svg-2 {
+    path {
+        fill: #ffffff;
+    }
+}
+
+//titles
+@mixin main-title {
+
+    text-transform: capitalize;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    font-family: var(--font);
+    font-weight: var(--fontW);
+
+}
+
+@mixin article {
+    text-transform: capitalize;
+    line-height: 1.5;
+    max-width: var(--max);
+    font-family: var(--font);
+    font-weight: var(--fontW);
+}
+
+@mixin secondary-title {
+    text-transform: capitalize;
+    font-family: var(--font);
+    font-weight: var(--fontW);
+
+
+}
+
+//nav-bar
+
+@mixin nav-mobile {
+
+    width: 100%;
+    max-width: 480px;
+    @include flex-1();
+    justify-content: space-between;
+
+
+
+
+
+
+
+
+
+}
+
+@mixin nav-tab {
+    width: 100%;
+    max-width: 768px;
+
+}
+
+@mixin nav-desktop {
+    width: 100%;
+    max-width: 1280px;
+
+
+
+}
+
+@mixin nav-ipad {
+    width: 100%;
+    max-width: 1024px;
+
+
+}
+
+@mixin ul {
+
+    list-style: none;
+    @include flex-1();
+
+
+    li {
+        margin: 0 1em;
+    }
+
+
+}
+
+@mixin links {
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: capitalize;
+    display: inline-block;
+    position: relative;
+
+}
+
+@mixin after--before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+}
+
+@mixin nav-links-hover {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid ;
+    transition: transform 0.5s ease-in;
+    transform-origin: 50%;
+    transform: scaleX(0);
+
+
+}
+
+//form
+@mixin form {
+    width: 100%;
+    @include box-shadow-3;
+    background-color: var(--white-2);
+    padding: 2em;
+    max-width: var(--max-width-mob);
+    height: 100%;
+    @include flex-2;
+    justify-content: space-around;
+
+    section {
+        width: 100%;
+
+        @include flex-2;
+        justify-content: flex-start;
+        text-transform: capitalize;
+        font-family: var(--font);
+
+
+        &>* {
+            width: 100%;
+            margin-bottom: 0.5em;
+        }
+
+        label {
+            @include secondary-title;
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+        }
+
+        input:not(#submit) {
+            height: 40px;
+            appearance: none;
+            border: none;
+            padding: 1em;
+            transition: all 0.5s ease-in;
+            outline: 1px solid rgba($color: #000000, $alpha: var(--alpha-5));
+
+            &:hover {
+                outline-color: var(--focus);
+            }
+        }
+
+        #submit {
+            margin-top: 2em;
+            height: 40px;
+            @include button;
+            transition: all 0.5s ease-in;
+            background-color: var(--green-1);
+            color: var(--dark-2);
+
+            &:hover {
+                background-color: var(--green-2);
+
+            }
+        }
+
+    }
+
+
+    .error {
+        outline-color: var(--error);
+    }
+
+    .success {
+        outline-color: var(--success);
+    }
+
+}
+//form
+@mixin form {
+    width: 100%;
+    @include box-shadow-3;
+    background-color: var(--white-2);
+    padding: 2em;
+    max-width: var(--max-width-mob);
+    height: 100%;
+    @include flex-2;
+    justify-content: space-around;
+
+    section {
+        width: 100%;
+
+        @include flex-2;
+        justify-content: flex-start;
+        text-transform: capitalize;
+        font-family: var(--font);
+
+
+        &>* {
+            width: 100%;
+            margin-bottom: 0.5em;
+        }
+
+        label {
+            @include secondary-title;
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+        }
+
+        input:not(#submit) {
+            height: 40px;
+            appearance: none;
+            border: none;
+            padding: 1em;
+            transition: all 0.5s ease-in;
+            outline: 1px solid rgba($color: #000000, $alpha: var(--alpha-5));
+
+            &:hover {
+                outline-color: var(--focus);
+            }
+        }
+
+        #submit {
+            margin-top: 2em;
+            height: 40px;
+            @include button;
+            transition: all 0.5s ease-in;
+            background-color: var(--green-1);
+            color: var(--dark-2);
+
+            &:hover {
+                background-color: var(--green-2);
+
+            }
+        }
+
+    }
+
+
+    .error {
+        outline-color: var(--error);
+    }
+
+    .success {
+        outline-color: var(--success);
+    }
+
+}
