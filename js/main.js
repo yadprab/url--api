@@ -151,9 +151,9 @@ const fetchData = ()=>{
             return `
              <li>
             <section class="links">
-                <a href="${links.destination}" class="unshorten">${links.destination}</a>
-                 <input type="text"  value="${links.shortUrl}" class = 'shortened'  readonly>
-                <button id="copy" class="copy" >copy</button>
+                <a href="${links.destination}" class="unshorten"  aria-label="original link">${links.destination}</a>
+                 <input type="text"  value="${links.shortUrl}" class = 'shortened'  readonly aria-label="shortened link ">
+                <button id="copy" class="copy" aria-label="click here to copy link ">copy</button>
     
             </section>
         </li>
