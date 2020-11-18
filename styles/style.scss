@@ -566,11 +566,11 @@ footer {
     }
 
     .attribution {
-       
+
         font-size: 0.9rem;
         text-align: center;
         color: #fafafa;
-        
+
 
         a {
             display: block;
@@ -701,7 +701,12 @@ footer {
 
                 a {
                     @include links;
+                    transition: color 0.5s ease-in;
                     color: var(--GrayishViolet);
+
+                    &:hover{
+                        color: var(--VeryDarkViolet);
+                    }
                 }
 
             }
@@ -710,12 +715,20 @@ footer {
                 display: block;
                 margin-left: auto;
 
+
                 a {
                     text-decoration: none;
                     color: var(--GrayishViolet);
                     font-weight: 700;
                     text-transform: capitalize;
                     margin: 0 0.5em;
+                    
+                &:nth-child(1){
+                    
+                    &:hover{
+                        color: var(--VeryDarkViolet);
+                    }
+                }
 
                 }
 
@@ -779,7 +792,7 @@ footer {
 
         .hero--section {
             grid-template-columns: repeat(2, 1fr);
-
+            padding: 4em;
             grid-auto-rows: auto;
 
 
@@ -797,11 +810,11 @@ footer {
                     max-width: 100%;
 
                     h1 {
-                        font-size: 3rem;
+                        font-size: 3.5rem;
                     }
 
                     p {
-                        font-size: 1.2rem;
+                        font-size: 1rem;
                         max-width: 480px;
                     }
 
@@ -857,6 +870,7 @@ footer {
             margin: 0;
             width: 90%;
             height: 50px;
+            border-radius: 5px;
 
 
         }
@@ -948,14 +962,14 @@ footer {
     footer {
         max-width: 1440px;
         grid-template-columns: repeat(5, 1fr);
-     
-        .attribution{
-           grid-row: 2;
-           grid-column: 1/6;
 
-           a{
-               display: inline;
-           }
+        .attribution {
+            grid-row: 2;
+            grid-column: 1/6;
+
+            a {
+                display: inline;
+            }
         }
 
     }

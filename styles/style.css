@@ -928,7 +928,12 @@ footer .attribution a {
     text-transform: capitalize;
     display: inline-block;
     position: relative;
+    -webkit-transition: color 0.5s ease-in;
+    transition: color 0.5s ease-in;
     color: var(--GrayishViolet);
+  }
+  header nav .desktop--nav a:hover {
+    color: var(--VeryDarkViolet);
   }
   header nav .button--area {
     display: block;
@@ -940,6 +945,9 @@ footer .attribution a {
     font-weight: 700;
     text-transform: capitalize;
     margin: 0 0.5em;
+  }
+  header nav .button--area a:nth-child(1):hover {
+    color: var(--VeryDarkViolet);
   }
   header nav .button--area #signup--desktop {
     display: inline-block;
@@ -994,6 +1002,7 @@ footer .attribution a {
   header .hero--section {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
+    padding: 4em;
     grid-auto-rows: auto;
   }
   header .hero--section .hero--img {
@@ -1012,10 +1021,10 @@ footer .attribution a {
     max-width: 100%;
   }
   header .hero--section .hero--text article h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
   header .hero--section .hero--text article p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     max-width: 480px;
   }
   header .hero--section .hero--text #get--started {
@@ -1053,6 +1062,7 @@ footer .attribution a {
     margin: 0;
     width: 90%;
     height: 50px;
+    border-radius: 5px;
   }
   form #submit {
     -ms-grid-row: 1;
