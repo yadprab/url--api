@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/style.css">
-    <title>Url shortener</title>
+    <link rel="stylesheet" href="./styles/style.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+   <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
 </head>
 <body>
     <section class="mobile--nav hide">
@@ -23,11 +24,12 @@
             </section>
             <section class="icon">
                 <button id="close--button" aria-label="close button">
-                    <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M14.364.222l1.414 1.414L9.414 8l6.364 6.364-1.414 1.414L8 9.414l-6.364 6.364-1.414-1.414L6.586 8 .222 1.636 1.636.222 8 6.586 14.364.222z" fill="#000" fill-rule="evenodd" /></svg>
+                    <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M14.364.222l1.414 1.414L9.414 8l6.364 6.364-1.414 1.414L8 9.414l-6.364 6.364-1.414-1.414L6.586 8 .222 1.636 1.636.222 8 6.586 14.364.222z" fill="#fff" fill-rule="evenodd" /></svg>
 
                 </button>
 
             </section>
+            
         </nav>
 
     </section>
@@ -46,7 +48,7 @@
 
             <section class="button--area">
                 <a href="login.html">login</a>
-                <a href="signup.html">signup</a>
+                <a href="signup.html" id="signup--desktop">signup</a>
 
             </section>
 
@@ -90,16 +92,7 @@
                     
                 </form>
                 <ul class="shortened--links">
-                     <!-- <li>
-                        <section class="links">
-                            <a href="https://www.frontendmentor.io/dashboard" class="unshorten">https://www.frontendmentor.io/dashboard</a>
-                            <a href="https://www.frontendmentor.io" class="shortened">https://www.frontendmentor.io</a>
-                             <input type="text" disabled value="">
-                            <button id="copy" class="copy" >copy</button>
-        
-                        </section>
-                    </li> -->
-                    
+
                    
                     
                     
@@ -141,9 +134,9 @@
  
                     </section>
                     <article>
-                        <h3>Brand Recognition</h3>
-                        <p> Boost your brand recognition with each click. Generic links don’t 
-                         mean a thing. Branded links help instil confidence in your content.</p>
+                        <h3>Detailed Records</h3>
+                        <p>Gain insights into who is clicking your links. Knowing when and where 
+                            people engage with your content helps inform better decisions.</p>
                     </article>
  
                  </section>
@@ -153,13 +146,13 @@
  
                     </section>
                     <article>
-                        <h3>Brand Recognition</h3>
-                        <p> Boost your brand recognition with each click. Generic links don’t 
-                         mean a thing. Branded links help instil confidence in your content.</p>
+                        <h3>Fully Customizable</h3>
+                        <p> Improve brand awareness and content discoverability through customizable 
+                            links, supercharging audience engagement.</p>
                     </article>
  
                  </section>
-               <div class="line"></div>
+               <div class="line" tabindex="-1"></div>
             </section>
 
         </section>
@@ -210,34 +203,40 @@
                 <path fill="#FFF" d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg>
          </a>
          <a href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-labelledby="title desc">
-                <title id="title"> instagram icon </title>
-                <desc id="desc">camera</desc>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-labelledby="title-1 desc-1">
+                <title id="title-1"> instagram icon </title>
+                <desc id="desc-1">camera</desc>
 
                 <path fill="#FFF" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
          </a>
          <a href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-labelledby="title desc">
-                <title id="title">pinterest logo </title>
-                <desc id="desc">p symbol</desc>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-labelledby="title-2 desc-2">
+                <title id="title-2">pinterest logo </title>
+                <desc id="desc-2">p symbol</desc>
                 <path fill="#FFF" d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg>
 
          </a>
          <a href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" aria-labelledby="title desc">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" aria-labelledby="title-3 desc-3">
 
-                <title id="title">twitter icon</title>
-                <desc id="desc"></desc>
+                <title id="title-3">twitter icon</title>
+                <desc id="desc-3"></desc>
 
                 <path fill="#FFF" d="M24 2.557a9.83 9.83 0 01-2.828.775A4.932 4.932 0 0023.337.608a9.864 9.864 0 01-3.127 1.195A4.916 4.916 0 0016.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 011.671 1.149a4.93 4.93 0 001.523 6.574 4.903 4.903 0 01-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 01-2.224.084 4.928 4.928 0 004.6 3.419A9.9 9.9 0 010 17.54a13.94 13.94 0 007.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0024 2.557z"/></svg>
          </a>
          
 
      </section>
+
+     <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>
+        Coded by <a href="#">Yathavan prabhaakar </a>
+      </div>
     </footer>
 
 
 
-    <script src="./js/main.js"></script>
+    <script src="./js/main.min.js"></script>
+    
 </body>
 </html>

@@ -44,11 +44,20 @@ body {
 
 }
 
+button:not(#nav--icon):not(.copy),
+#signup--desktop,
+#signup {
+    &:hover {
+        @include box-shadow-4;
+    }
+}
+
 header {
     max-width: 480px;
     background-color: #ffff;
     position: relative;
     @include flex-2;
+    margin-bottom: 5em;
 
     nav {
         @include nav-mobile;
@@ -93,6 +102,7 @@ header {
 
         .hero--text {
             text-align: center;
+            @include flex-2;
 
             article {
                 max-width: 480px;
@@ -144,6 +154,8 @@ header {
             gap: 1rem;
             grid-auto-rows: 180px;
             list-style: none;
+            z-index: 12000;
+
 
 
             li {
@@ -153,6 +165,7 @@ header {
                 overflow: hidden;
                 border-radius: 5px;
                 padding: 1em;
+
 
                 .links {
                     width: 100%;
@@ -227,6 +240,24 @@ form {
     }
 }
 
+.loader {
+
+    .box {
+        background-color: rgba(165, 165, 165, 0.6);
+        width: 100%;
+        height: 20px;
+        margin-bottom: 1em;
+        animation: pulse 0.4s ease-in infinite;
+
+        &:nth-child(2) {
+            width: 80%;
+        }
+
+        &:nth-child(3) {
+            width: 70%;
+        }
+    }
+}
 
 .mobile--nav {
     position: absolute;
@@ -252,7 +283,6 @@ form {
         @include flex-2;
         justify-content: flex-start;
         position: relative;
-        transition: transform 0.4s cubic-bezier(0.895, 0.03, 0.685, 0.22);
         transform: translateY(-150%);
 
         .button--area {
@@ -337,7 +367,7 @@ form {
     background-color: unset;
     font-weight: 400;
     pointer-events: none;
-  
+
 }
 
 .copy {
@@ -355,7 +385,10 @@ main {
 
     background-color: hsl(0, 0%, 97%);
     max-width: 480px;
-    padding: 2em 0 0 0;
+    // padding: 2em 0 0 0;
+    @include flex-2;
+
+
 
 
     .container {
@@ -363,7 +396,8 @@ main {
         margin-top: 5em;
 
         article {
-
+            width: 100%;
+            max-width: 480px;
 
             h2 {
                 text-align: center;
@@ -396,7 +430,7 @@ main {
                 position: absolute;
                 left: 50%;
                 top: 50%;
-                transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%) rotate(0deg);
                 z-index: -1;
             }
 
@@ -453,10 +487,13 @@ main {
 }
 
 .get--started {
+    width: 100%;
     height: 30vh;
     margin-top: 1em;
     @include flex-2;
     background: url(../images/bg-boost-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: var(--DarkViolet);
 
     h3 {
@@ -528,8 +565,25 @@ footer {
         }
     }
 
+    .attribution {
+       
+        font-size: 0.9rem;
+        text-align: center;
+        color: #fafafa;
+        
+
+        a {
+            display: block;
+            color: hsl(228, 45%, 44%);
+
+        }
+
+    }
+
 
 }
+
+
 
 //js section
 
@@ -540,11 +594,372 @@ footer {
 .error {
     outline: 2px solid var(--Red);
 }
-.copied{
+
+.copied {
     background-color: var(--DarkViolet);
 }
-.nav--in{
-  nav{
-    transform: translateY(0);
-  }
+
+.nav--in {
+    nav {
+        transform: translateY(0);
+    }
+}
+
+//animation
+@keyframes pulse {
+    0% {
+        background-color: rgba(165, 165, 165, 0.6);
+    }
+
+    50% {
+        background-color: rgba(165, 165, 165, 1);
+    }
+
+    100% {
+        background-color: rgba(165, 165, 165, 0.5);
+    }
+}
+
+//media queries
+@media screen and (min-width:481px) {
+
+    header {
+        max-width: 768px;
+
+        nav {
+            max-width: 768px;
+        }
+
+    }
+
+    main {
+        max-width: 768px;
+    }
+
+    footer {
+        max-width: 768px;
+    }
+
+    .mobile--nav {
+        max-width: 768px;
+    }
+
+}
+
+@media screen and (min-width:769px) {
+
+    header {
+        max-width: 900px;
+
+        nav {
+            max-width: 900px;
+        }
+
+    }
+
+    main {
+        max-width: 900px;
+    }
+
+    footer {
+        max-width: 900px;
+    }
+
+    form {
+        width: 100%;
+        max-width: 700px;
+
+        small {
+            padding: 0 5em;
+        }
+
+        #url {
+            height: 40px;
+        }
+    }
+
+    .mobile--nav {
+        max-width: 900px;
+    }
+
+}
+
+@media screen and (min-width:901px) {
+
+    header {
+        max-width: 1100px;
+
+        nav {
+            max-width: 1100px;
+            justify-content: flex-start;
+
+
+
+            .desktop--nav {
+                @include ul;
+                margin-left: 1em;
+
+                a {
+                    @include links;
+                    color: var(--GrayishViolet);
+                }
+
+            }
+
+            .button--area {
+                display: block;
+                margin-left: auto;
+
+                a {
+                    text-decoration: none;
+                    color: var(--GrayishViolet);
+                    font-weight: 700;
+                    text-transform: capitalize;
+                    margin: 0 0.5em;
+
+                }
+
+                #signup--desktop {
+                    @include button;
+                    color: #fafafa;
+                    border-radius: 20px;
+                    background-color: var(--Cyan);
+                    padding: 0.5em 2em;
+                    text-align: center;
+
+                }
+            }
+
+            .icon {
+
+                display: none;
+            }
+        }
+
+    }
+
+    main {
+        max-width: 1100px;
+        overflow: hidden;
+
+    }
+
+    footer {
+
+        max-width: 1100px;
+    }
+
+
+
+
+}
+
+@media screen and(min-width:1101px) {
+
+    header {
+        max-width: 1440px;
+
+        nav {
+            max-width: 1440px;
+        }
+
+        .input {
+            grid-row: 2;
+            grid-column: 1/3;
+            width: 100%;
+
+
+
+
+
+            ul {
+                grid-template-columns: repeat(3, 300px);
+            }
+        }
+
+        .hero--section {
+            grid-template-columns: repeat(2, 1fr);
+
+            grid-auto-rows: auto;
+
+
+            .hero--img {
+                order: 2;
+            }
+
+            .hero--text {
+                order: 1;
+                text-align: left;
+                padding: 1em;
+
+                article {
+
+                    max-width: 100%;
+
+                    h1 {
+                        font-size: 3rem;
+                    }
+
+                    p {
+                        font-size: 1.2rem;
+                        max-width: 480px;
+                    }
+
+
+
+
+
+                }
+
+                #get--started {
+                    align-self: flex-start;
+                    padding: 0.5em 2em;
+
+                }
+            }
+
+
+
+        }
+    }
+
+
+
+    form {
+        max-width: 1100px;
+        height: 130px;
+        display: grid;
+        grid-template-columns: 1fr 200px;
+        padding: 0 0 0 1em;
+        place-items: center;
+        grid-auto-rows: auto;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(../images/bg-shorten-desktop.svg);
+        position: relative;
+
+
+
+        small {
+            place-self: start;
+            margin-left: 1em;
+            position: absolute;
+            bottom: 10px;
+            left: 0px;
+
+
+
+        }
+
+        #url {
+            grid-row: 1;
+            grid-column: 1;
+            margin: 0;
+            width: 90%;
+            height: 50px;
+
+
+        }
+
+        #submit {
+            grid-row: 1;
+            grid-column: 2;
+            justify-self: stretch;
+            padding: 0.75em 1em;
+
+
+
+
+        }
+
+
+
+
+
+    }
+
+    main {
+        max-width: 1440px;
+
+        .container {
+            article {
+                max-width: 100%;
+                text-align: center;
+                margin-top: 2em;
+
+
+
+                p {
+                    max-width: 100%;
+                    max-width: 480px;
+                    margin: 0 auto;
+                }
+
+            }
+
+            .cards {
+                grid-template-columns: repeat(3, 300px);
+                grid-auto-rows: 250px;
+                height: 70vh;
+                margin-top: 0;
+
+                .line {
+                    transform: translate(-50%, -50%) rotate(90deg);
+
+                }
+
+                .card {
+
+                    article {
+                        text-align: left;
+
+                        p {
+                            width: 100%;
+                            text-align: left;
+                            font-size: 0.83rem;
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        height: 220px;
+                        align-self: end;
+                    }
+
+                    &:nth-child(3) {
+                        height: 210px;
+                        align-self: end;
+                    }
+                }
+            }
+
+
+        }
+    }
+
+
+    .get--started {
+        background-image: url(../images/bg-boost-desktop.svg);
+
+        .get--started--button {
+            padding: 0.5em 2em;
+        }
+    }
+
+    footer {
+        max-width: 1440px;
+        grid-template-columns: repeat(5, 1fr);
+     
+        .attribution{
+           grid-row: 2;
+           grid-column: 1/6;
+
+           a{
+               display: inline;
+           }
+        }
+
+    }
+
+
+
 }
